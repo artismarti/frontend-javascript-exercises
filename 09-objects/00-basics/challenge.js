@@ -28,5 +28,4 @@ module.exports.canIGet = function(item, money){
     "Apple Sticker": 1
   };
   return priceList[item] <= money;
-
 };
