@@ -8,8 +8,8 @@ module.exports.createCourse = function(courseTitle, courseDuration, courseStuden
 };
 
 module.exports.addProperty = function(object, newProp, newValue){
-  if (object.newProp == undefined){
-    object.newProp = newValue;
+  if (object[newProp] == undefined){
+    object[newProp] = newValue;
     return object;
   } else {
     return object;
@@ -27,4 +27,6 @@ module.exports.canIGet = function(item, money){
     "Mac Pro": 2499,
     "Apple Sticker": 1
   };
+  return priceList[item] <= money;
+
 };
